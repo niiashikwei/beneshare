@@ -37,6 +37,11 @@ group :production do
   gem 'thin'
 end
 
+group :assets do
+  gem 'haml-rails'
+  gem 'haml'
+end
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
