@@ -28,7 +28,8 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 # CSS styling framework
-gem 'ZURB-foundation'
+gem 'foundation-rails'
+gem 'zurb-foundation'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
