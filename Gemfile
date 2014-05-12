@@ -36,7 +36,7 @@ gem 'haml-rails'
 gem 'haml'
 
 # CSS styling framework
-gem 'foundation-rails'
+#gem 'foundation-rails'
 
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'

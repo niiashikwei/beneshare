@@ -13,9 +13,7 @@
 #= require jquery
 #= require jquery_ujs
 #= require turbolinks
-#= require foundation
+#= require mm-foundation-0.1.0
+#= require mm-foundation-tpls-0.1.0
 #= require_tree .
-$ ->
-  $(document).foundation()
-  return
 
