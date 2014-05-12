@@ -13,7 +13,9 @@
 #= require jquery
 #= require jquery_ujs
 #= require turbolinks
-#= require mm-foundation-0.1.0
-#= require mm-foundation-tpls-0.1.0
+#= require angular/angular.js
+#= require foundation/mm-foundation-0.1.0.js
+#= require foundation/mm-foundation-tpls-0.1.0.js
+#= require main_app
 #= require_tree .
 
