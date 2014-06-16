@@ -1,5 +1,10 @@
 %div{'ng-controller' => 'RequestController'}
   %h3 Requests
-  %a.blue.button{'ng-click' => 'create_request()'} Create Request
+  = form_for :request do |f|
+    = f.label :description
+    = f.text_field :description
+    %input.tiny.blue.button{type: 'submit', value: 'Create Request'}
 
   #requests
+    - @requests.each do |r|
+      .description=r.description

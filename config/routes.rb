@@ -7,6 +7,8 @@ Beneshare::Application.routes.draw do
 
   get 'requests' => 'requests#index'
 
+  post 'requests' => 'requests#create'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
