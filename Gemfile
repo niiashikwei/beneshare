@@ -25,6 +25,7 @@ end
 
 group :development do
   gem 'rails_layout'
+  gem 'nyan-cat-formatter'
 end
 
 group :production do
