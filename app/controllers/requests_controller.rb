@@ -4,7 +4,12 @@ class RequestsController < ApplicationController
   end
 
   def create
-    Request.new(params[:request].permit(:description)).save
+    Request.new(params[:request].permit(
+      :requestor,
+      :location,
+      :message,
+      :request_type
+    )).save
     redirect_to action: :index
   end
 end

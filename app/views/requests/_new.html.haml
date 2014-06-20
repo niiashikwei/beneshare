@@ -1,0 +1,22 @@
+%h3 New Request
+=form_for :request do |f|
+  .row
+    .columns.large-12
+      =f.label :requestor, 'Your Name'
+      =f.text_field :requestor
+  .row
+    .columns.large-8
+      =f.label :location, 'Travel Location'
+      =f.text_field :location
+    .columns.large-4.large-pull-12
+      =f.label :request_type, 'Request Type'
+      %select{name: :request_type}
+        - Request.request_types.each do |key, value|
+          %option{value: value}= key.capitalize
+  .row
+    .columns.large-12
+      =f.label :message
+      =f.text_area :message
+  .row
+    .columns.large-12
+      %input.tiny.blue.button{type: 'submit', value: 'Create Request'}

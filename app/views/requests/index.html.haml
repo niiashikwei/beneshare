@@ -1,10 +1,11 @@
 %div{'ng-controller' => 'RequestController'}
   %h3 Requests
-  = form_for :request do |f|
-    = f.label :description
-    = f.text_field :description
-    %input.tiny.blue.button{type: 'submit', value: 'Create Request'}
+
+  %a.tiny.blue.button{:href => '#', :'data-reveal-id' => 'new-request'} New Request
+  #new-request.reveal-modal.small{:'data-reveal' => true}
+    = render partial: 'new.html.haml'
+    %a.close-reveal-modal &#215;
 
   #requests
     - @requests.each do |r|
-      .description=r.description
+      .description=r.message
