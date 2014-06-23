@@ -8,7 +8,9 @@ class RequestsController < ApplicationController
       :requestor,
       :location,
       :message,
-      :request_type
+      :request_type,
+      :start_date,
+      :end_date
     )).save
     redirect_to action: :index
   end
