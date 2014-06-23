@@ -1,6 +1,9 @@
 class RequestsController < ApplicationController
   def index
-    @requests = Request.all
+    respond_to do |format|
+      format.html { render 'index' }
+      format.json { render json: Request.all.as_json }
+    end
   end
 
   def create

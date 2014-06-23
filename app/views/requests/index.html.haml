@@ -5,7 +5,3 @@
   #new-request.reveal-modal.small{:'data-reveal' => true}
     = render partial: 'new.html.haml'
     %a.close-reveal-modal &#215;
-
-  #requests
-    - @requests.each do |r|
-      .description=r.message
