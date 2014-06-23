@@ -3,11 +3,11 @@
   .row
     .columns.large-12
       =f.label :requestor, 'Your Name'
-      =f.text_field :requestor
+      =f.text_field :requestor, required: true
   .row
     .columns.large-8
       =f.label :location, 'Travel Location'
-      =f.text_field :location
+      =f.text_field :location, required: true
     .columns.large-4.large-pull-12
       =f.label :request_type, 'Request Type'
       %select{name: :request_type}
@@ -16,10 +16,10 @@
   .row
     .columns.large-6
       =f.label :start_date, 'Start Date'
-      =f.date_field :start_date
+      =f.date_field :start_date, required: true
     .columns.large-6
       =f.label :end_date, 'End Date'
-      =f.date_field :end_date
+      =f.date_field :end_date, required: true
   .row
     .columns.large-12
       =f.label :message
