@@ -10,9 +10,7 @@
       =f.text_field :location, required: true
     .columns.large-4.large-pull-12
       =f.label :request_type, 'Request Type'
-      %select{name: :request_type}
-        - Request.request_types.each do |key, value|
-          %option{value: value}= key.capitalize
+      =f.select :request_type, { :'Flight' => 'flight', :'Room' => 'room' }
   .row
     .columns.large-6
       =f.label :start_date, 'Start Date'
