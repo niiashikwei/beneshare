@@ -1,4 +1,4 @@
-app = angular.module 'main_app', []
+app = angular.module 'main_app', ['ngResource']
 
 fakeData = [
   { message:'Hi can I stay over', location: 'ny', start_date: '6th June', end_date: '9th June', category: 'p1', request_type: 'flight', requestor: 'Tony'},

@@ -14,6 +14,7 @@
 #= require jquery_ujs
 #= require turbolinks
 #= require angular/angular.js
+#= require angular/angular-resource.js
 #= require foundation/foundation.js
 #= require foundation/foundation.reveal.js
 #= require main_app
