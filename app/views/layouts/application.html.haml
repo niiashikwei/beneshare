@@ -1,15 +1,15 @@
 !!!
-%html{"ng-app" => "main_app"}
+%html{'ng-app' => 'main_app'}
   %head
-    %title= content_for?(:title) ? yield(:title) : "Beneshare"
-    %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}
-    %meta{content: content_for?(:description) ? yield(:description) : "Beneshare", name: "description"}
-    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    %title= content_for?(:title) ? yield(:title) : 'Beneshare'
+    %meta{content: 'width=device-width, initial-scale=1.0', name: 'viewport'}
+    %meta{content: content_for?(:description) ? yield(:description) : 'Beneshare', name: 'description'}
     = stylesheet_link_tag 'foundation/normalize', media: 'all', 'data-turbolinks-track' => true
     = stylesheet_link_tag 'foundation/foundation', media: 'all', 'data-turbolinks-track' => true
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
-    %main{role: "main"}
+    %main{role: 'main'}
       = yield
     %script $(document).foundation();

@@ -33,6 +33,10 @@ group :production do
   gem 'thin'
 end
 
+group :development, :test do
+  gem 'jasmine'
+end
+
 gem 'haml-rails'
 gem 'haml'
 

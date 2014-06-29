@@ -1,7 +1,25 @@
-%div{'ng-controller' => 'RequestController'}
+%div{'ng-controller' => 'RequestController as requestsProvider'}
   %h3 Requests
 
   %a.tiny.blue.button{:href => '#', :'data-reveal-id' => 'new-request'} New Request
   #new-request.reveal-modal.small{:'data-reveal' => true}
     = render partial: 'new.html.haml'
     %a.close-reveal-modal &#215;
+
+  %table{'class'=>'requests'}
+    %thead
+      %tr
+        %th message
+        %th location
+        %th start date
+        %th end date
+        %th request type
+        %th request category
+    %tbody
+      %tr{'ng-class'=>'request.category', 'ng-repeat'=>'request in requestsProvider.requests'}
+        %td {{request.message}}
+        %td {{request.location}}
+        %td {{request.start_date}}
+        %td {{request.end_date}}
+        %td {{request.request_type}}
+        %td {{request.category}}
