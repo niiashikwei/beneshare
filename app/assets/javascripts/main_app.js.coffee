@@ -1,16 +1,8 @@
 app = angular.module 'main_app', ['ngResource']
 
-fakeData = [
-  { message:'Hi can I stay over', location: 'ny', start_date: '6th June', end_date: '9th June', category: 'p1', request_type: 'flight', requestor: 'Tony'},
-  { message:'Need a place to crash', location: 'atl', start_date: '11th April', end_date: '13th April', category: 'p3', request_type: 'stay', requestor: 'Jake'},
-  { message:'Need a flight', location: 'chicago', start_date: '11th June', end_date: '13th June', category: 'p2', request_type: 'stay', requestor: 'Peter'},
-  { message:'Need a flight', location: 'sf', start_date: '21th June', end_date: '23th June', category: 'other', request_type: 'flight', requestor: 'Mary'},
-  { message:'Hi can I stay over', location: 'ny', start_date: '6th June', end_date: '9th June', category: 'p1', request_type: 'flight', requestor: 'Tom'},
-  { message:'Need a flight', location: 'chicago', start_date: '11th June', end_date: '13th June', category: 'other', request_type: 'stay', requestor: 'Cassie'},
-  { message:'Need a place to crash', location: 'atl', start_date: '11th April', end_date: '13th April', category: 'p3', request_type: 'stay', requestor: 'Tim'},
-]
+app.controller 'RequestController', ($resource)->
+  Request = $resource("/requests.json")
 
-app.controller 'RequestController', ->
-  this.requests = fakeData
-
-  return
+  return{
+    requests: Request.query ->
+  }
