@@ -3,6 +3,7 @@ class CreateRequests < ActiveRecord::Migration
     create_table :requests do |t|
       t.string :requestor
       t.string :request_type
+      t.string :category
       t.text :message
       t.string :location
       t.date :start_date

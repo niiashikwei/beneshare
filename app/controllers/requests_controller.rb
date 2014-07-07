@@ -12,6 +12,7 @@ class RequestsController < ApplicationController
       :location,
       :message,
       :request_type,
+      :category,
       :start_date,
       :end_date
     )).save
