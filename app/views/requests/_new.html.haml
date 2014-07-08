@@ -10,10 +10,10 @@
       =f.text_field :location, required: true
     .columns.large-3
       =f.label :request_type, 'Type'
-      =f.select :request_type, { :'Flight' => 'flight', :'Room' => 'room' }
+      =f.select :request_type, [:flight, :room]
     .columns.large-3
       =f.label :category, 'Category'
-      =f.select :category, [ :'P1', :'P2', :'P3']
+      =f.select :category, [:p1, :p2, :p3]
   .row
     .columns.large-6
       =f.label :start_date, 'Start Date'
@@ -24,7 +24,7 @@
   .row
     .columns.large-12
       =f.label :message
-      =f.text_area :message
+      =f.text_area :message, required: true
   .row
     .columns.large-12
       %input.tiny.blue.button{type: 'submit', value: 'Create Request'}
