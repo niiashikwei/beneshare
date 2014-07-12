@@ -55,6 +55,9 @@ gem 'uglifier', '>= 1.3.0'
 # For unit testing
 gem 'rspec-rails'
 
+#for authentication
+gem 'devise'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 

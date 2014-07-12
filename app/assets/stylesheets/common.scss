@@ -1,0 +1,38 @@
+html{
+  height: 100%;
+  body{
+    text-align: center;
+    height: 100%;
+    .main-nav{
+      padding-left: 1%;
+      padding-right: 1%;
+      padding-top: 1%;
+      padding-bottom: 1%;
+      height: 5%;
+      font-size: 150%;
+      display: flex;
+      justify-content: space-between;
+      .left{
+        float: left;
+      }
+      .right{
+        float: left;
+      }
+    }
+    .notice{
+
+    }
+    .content{
+      height: 100%;
+      form{
+        display: inline-block;
+        label{
+        }
+        input{
+          max-width: 450px;
+        }
+      }
+    }
+  }
+}
+
