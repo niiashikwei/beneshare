@@ -1,5 +1,5 @@
 %h3 New Request
-=form_for :request do |f|
+=form_for(:request, url: '/requests') do |f|
   .row
     .columns.large-12
       =f.label :requestor, 'Your Name'
@@ -27,4 +27,4 @@
       =f.text_area :message, required: true
   .row
     .columns.large-12
-      %input.tiny.blue.button{type: 'submit', value: 'Create Request'}
+      =f.submit 'Create Request', {class: 'tiny blue button'}
