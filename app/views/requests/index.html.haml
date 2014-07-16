@@ -15,6 +15,7 @@
         %th end date
         %th request type
         %th request category
+        %th requestor
     %tbody
       %tr{'ng-class'=>'request.category', 'ng-repeat'=>'request in requestsProvider.requests'}
         %td {{request.message}}
@@ -23,3 +24,4 @@
         %td {{request.end_date}}
         %td {{request.request_type}}
         %td {{request.category}}
+        %td {{request.requestor}}
